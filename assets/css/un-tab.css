@@ -128,7 +128,7 @@ div.bhoechie-tab-menu div.list-group > a {
 }
 #un-header-form label {
 
-    padding-left: 20px;
+    /*padding-left: 20px;*/
 
 }
 
@@ -191,5 +191,10 @@ div.bhoechie-tab-menu div.list-group > a {
   margin-bottom: 10px;
     margin-top: 10px;
     display: block;
+}
+
+.input_hidden
+{
+  display: none;
 }
     

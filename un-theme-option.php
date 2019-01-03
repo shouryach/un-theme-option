@@ -79,6 +79,10 @@ if (!class_exists('untheme_Setting')) {
 			
 
 			add_option( 'untheme_initial_width', ''); 
+			
+			add_option( 'untheme_back_to_top', ''); 
+
+			add_option( 'untheme_fav_icon', ''); 
 
 		   	register_setting( 'untheme_options_group', 'untheme_register_email', 'untheme_register_email_callback' );
 		   	register_setting( 'untheme_options_group', 'untheme_register_apikey', 'untheme_register_apikey_callback' );
@@ -94,6 +98,8 @@ if (!class_exists('untheme_Setting')) {
 		   	register_setting( 'untheme_options_group', 'untheme_grident_third_color', 'untheme_grident_third_color_callback' );
 		   	register_setting( 'untheme_options_group', 'untheme_grident_fourth_color', 'untheme_grident_fourth_color_callback' );
 		   	register_setting( 'untheme_options_group', 'untheme_initial_width', 'untheme_initial_width_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_back_to_top', 'untheme_back_to_top_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_fav_icon', 'untheme_fav_icon_callback' );
 
 
 
@@ -279,6 +285,9 @@ $font_family = get_option('untheme_font_family');
 
  $font_family = str_replace('+', ' ', $font_family);
 
+ $gradient1 = get_option('untheme_grident_primary_color');
+ $gradient2 = get_option('untheme_grident_secondary_color');
+
 foreach ($results->items as $item) {
 
 	if($item->family == $font_family)
@@ -304,6 +313,14 @@ foreach ($results->items as $item) {
 			}
 			
 		</style>
+
+
+		<style>
+body {
+    
+    background: linear-gradient(to right, <?php echo $gradient1;?> 0%, <?php echo $gradient2;?> 100%)
+}
+</style>
 		
 		
 	<?php }
