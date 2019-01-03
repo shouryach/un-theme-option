@@ -6,8 +6,8 @@ div.bhoechie-tab-container{
   /*border-radius: 4px;*/
  /* -moz-border-radius: 4px;*/
  /* border:1px solid #ddd;*/
-  margin-top: 20px;
-  margin-left: 50px;
+  margin-top: 0px;
+  margin-left: 0px;
  /* -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
   box-shadow: 0 6px 12px rgba(0,0,0,.175);
   -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);*/
@@ -61,7 +61,7 @@ div.bhoechie-tab-menu div.list-group>a.active:after{
 
 div.bhoechie-tab-content{
   background-color: #ffffff;
-  padding: 5px 15px 20px;
+  padding: 5px 0px 20px;
 }
 
 div.bhoechie-tab div.bhoechie-tab-content:not(.active){
@@ -80,7 +80,6 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
 
 [class*="un-"] {
   float: left;
-  padding: 15px;
 }
 
 .un-col-1 {width: 8.33%;}
@@ -95,3 +94,40 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
 .un-col-10 {width: 83.33%;}
 .un-col-11 {width: 91.66%;}
 .un-col-12 {width: 100%;}
+.bhoechie-tab-container .list-group-item {
+    text-align: center;
+    padding: 12px 0;
+}
+.bhoechie-tab-menu .list-group .list-group-item{
+	text-decoration: none;
+} 
+.bhoechie-tab-menu .un-col-3 {
+    padding-right: 10px;
+}
+div.bhoechie-tab-menu div.list-group > a {
+
+    background: linear-gradient(to right, rgba(3,220,235,1) 0%, rgba(1,195,217,1) 100%);
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 2px solid #fff;
+    padding: 18px 0px;
+
+}
+.bhoechie-tab-content.active h2 {
+
+    background-color: #23c1c4;
+    font-size: 36px;
+    text-align: center;
+    padding: 23px 0;
+    color: #fff;
+    text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 20px;
+
+}
+#un-header-form label {
+
+    padding-left: 20px;
+
+}

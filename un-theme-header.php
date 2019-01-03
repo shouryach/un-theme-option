@@ -1,11 +1,17 @@
 <?php
 function untheme_header() { ?>
-			       
+			       <style>#wpcontent{
+				padding-left: 0 !important;
+			}</style>
+			
+			
 	<section class="cls-repair">
+  
    
             <div class="bhoechie-tab-container">
+              
                <div class="bhoechie-tab-menu un-row">
-	                  <div class="list-group un-col-4">
+	                  <div class="list-group un-col-3">
 	                     <a href="#" class="list-group-item active text-center">
 	                     Header<span class="arrow-cls-right"><i class="fa fa-angle-double-right"></i></span>
 	                     </a>
@@ -17,7 +23,7 @@ function untheme_header() { ?>
 	                     </a>
 	                  </div>
              
-		         <div class="content-area un-col-8">
+		         <div class="content-area un-col-9">
 		            <div class="right-side-credit bhoechie-tab">
 		               <div class="bhoechie-tab-content active">
 
@@ -60,6 +66,7 @@ function untheme_header() { ?>
 									 <button class="" id="feedier-admin-save" type="submit">
 			                        <?php _e( 'Save', 'feedier' ); ?>
 			                    </button>
+							  </div>
 
 		                  </form>
 		                  
@@ -77,6 +84,7 @@ function untheme_header() { ?>
 		         </div>
       </div>
    </div>
+
 </section>
 
 <?php }

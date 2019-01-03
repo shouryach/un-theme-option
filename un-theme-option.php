@@ -7,6 +7,7 @@ Author: Shourya Chowdhury
 Author URI: http://codeartssolution.com/
 */
 
+
 if (!defined('ABSPATH')) exit;
 
 include( plugin_dir_path( __FILE__ ) . 'functions.php');
@@ -95,7 +96,7 @@ if (!class_exists('untheme_Setting')) {
 			add_submenu_page( 'untheme_theme_option', 'Register Api Key', 'Register Api Key',
    			 'manage_options', 'untheme_theme_option');
 			// Add to admin_menu function
- 			add_submenu_page( 'untheme_theme_option', __('Un Header'), __('Header'), 'edit_themes', 'untheme_header', untheme_header);
+ 			add_submenu_page( 'untheme_theme_option', __('Un Header'), __('Header'), 'edit_themes', 'untheme_header', 'untheme_header');
  
 			
 
@@ -110,20 +111,25 @@ if (!class_exists('untheme_Setting')) {
 		//callback function for options
 
 		function  untheme_register_email_page() { ?>
+<style>#wpcontent{
+				padding-left: 0 !important;
+			}</style>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
-
+			<div class="un-api">
 			<div class="container">
-				<div class="row">
-					
+				<div class="un-row">
+				<div class="un-col-5">
+				<div class="un-logo">
+					<img src="<?php echo UNTHEME_URL ?>assets/img/untheme-logo.png">
+				</div>
+					<div class="un-theme-apipage-heading">
 						<h2>Welcome To Theme Option Of Un Theme</h2>
 						<p>You Need To Enter Your Email Id and Api Key Provided By Us In Your Register Email Id</p>
-					
-				</div>
-			</div>
-
-			
-
-			<div class="sb-option-block">
+					</div>	
+						<div class="sb-option-block">
 
 				
 
@@ -132,10 +138,17 @@ if (!class_exists('untheme_Setting')) {
 				<div class="form-style-6">
 				<h1>Enter Api Details</h1>
 				<form id="un-admin-form" class="postbox">
-					
+				
+					<div class="un-dp-input">
+					<span class="un-dp-icon"><img src="<?php echo UNTHEME_URL ?>assets/img/envelope.png" alt=""></span>
 					<input type="email"  id="untheme_register_email" name="untheme_register_email" value="<?php echo get_option('untheme_register_email'); ?>" placeholder="Email Address" required/>
 					
+					</div>
+					
+					<div class="un-dp-input">
+					<span class="un-dp-icon"><img src="<?php echo UNTHEME_URL ?>assets/img/api.png" alt=""></span>
 					<input type="text"  id="untheme_register_apikey" name="untheme_register_apikey" value="<?php echo get_option('untheme_register_apikey'); ?>" placeholder="Api Key" required/>
+					</div>
 					
 					
 					
@@ -155,7 +168,27 @@ if (!class_exists('untheme_Setting')) {
 				
 
 			</div><!--option ends-->
-
+				<div class="un-api-success">
+					<p>Api Success <i class="fa fa-check" aria-hidden="true"></i></p>
+				</div>
+				<div class="un-api-error">
+					<p>Api Error !</p>
+				</div>
+					
+				</div>
+				<div class="un-col-7">
+				<div class="un-api-img">
+					<img src="<?php echo UNTHEME_URL ?>assets/img/chain-close-up-display-1036857.jpg" >
+					</div>
+				</div>
+				
+				
+				
+				
+				</div>
+				
+			</div>
+		</div>
 		<?php }
 
 
@@ -228,6 +261,7 @@ foreach ($results->items as $item) {
 			{
 				font-family: '<?php echo $font_family;?>', <?php echo($item->category);?> !important;
 			}
+			
 		</style>
 		
 		
