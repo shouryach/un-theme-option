@@ -71,6 +71,11 @@ jQuery( document ).ready( function () {
 
     } );
 
+    jQuery('#qode_top_save_button').click(function(){
+
+         jQuery("#un-header-form").submit();
+    });
+
 } );
 
 

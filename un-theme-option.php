@@ -14,6 +14,14 @@ include( plugin_dir_path( __FILE__ ) . 'functions.php');
 include( plugin_dir_path( __FILE__ ) . 'un-theme-header.php');
 
 
+add_action( 'admin_enqueue_scripts', 'un_enqueue_color_picker' );
+function un_enqueue_color_picker( $hook_suffix ) {
+    // first check that $hook_suffix is appropriate for your admin page
+    wp_enqueue_style( 'wp-color-picker' );
+    wp_enqueue_script( 'my-script-handle', plugins_url('/assets/js/un-color-picker.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
+}
+
+
 function custom_add_google_fonts() {
 
 $font_family = get_option('untheme_font_family');
@@ -54,14 +62,38 @@ if (!class_exists('untheme_Setting')) {
 			add_option( 'untheme_register_email', ''); 
 			add_option( 'untheme_register_apikey', ''); 
 			add_option( 'untheme_api_validation', ''); 
+			
 			add_option( 'untheme_font_family', ''); 
 			add_option( 'untheme_body_font_family', ''); 
+			
+			add_option( 'untheme_primary_color', ''); 
+			add_option( 'untheme_secondary_color', ''); 
+			add_option( 'untheme_third_color', ''); 
+			add_option( 'untheme_fourth_color', ''); 
+			
+
+			add_option( 'untheme_grident_primary_color', ''); 
+			add_option( 'untheme_grident_secondary_color', ''); 
+			add_option( 'untheme_grident_third_color', ''); 
+			add_option( 'untheme_grident_fourth_color', ''); 
+			
+
+			add_option( 'untheme_initial_width', ''); 
 
 		   	register_setting( 'untheme_options_group', 'untheme_register_email', 'untheme_register_email_callback' );
 		   	register_setting( 'untheme_options_group', 'untheme_register_apikey', 'untheme_register_apikey_callback' );
 		   	register_setting( 'untheme_options_group', 'untheme_api_validation', 'untheme_api_validation_callback' );
 		   	register_setting( 'untheme_options_group', 'untheme_font_family', 'untheme_font_family_callback' );
-		   	register_setting( 'untheme_options_group', 'untheme_body_font_family', 'untheme_font_family_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_body_font_family', 'untheme_body_font_family_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_primary_color', 'untheme_primary_color_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_secondary_color', 'untheme_secondary_color_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_third_color', 'untheme_third_color_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_fourth_color', 'untheme_fourth_color_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_grident_primary_color', 'untheme_grident_primary_color_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_grident_secondary_color', 'untheme_grident_secondary_color_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_grident_third_color', 'untheme_grident_third_color_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_grident_fourth_color', 'untheme_grident_fourth_color_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_initial_width', 'untheme_initial_width_callback' );
 
 
 
@@ -206,6 +238,15 @@ $GLOBALS['untheme_Setting'] = new untheme_Setting();
 wp_enqueue_style('untheme-admin', UNTHEME_URL. 'assets/css/admin.css', false, 1.0);
 wp_enqueue_style('untheme-grid', UNTHEME_URL. 'assets/css/un-tab.css', false, 1.0);
 wp_enqueue_style('untheme-select2', UNTHEME_URL. 'assets/css/select2.css', false, 1.0);
+wp_enqueue_style('un-theme-option-bootstrap', UNTHEME_URL. 'assets/css/un-theme-option-bootstrap.css', false, 1.0);
+wp_enqueue_style('un-theme-ui', UNTHEME_URL. 'assets/css/un-theme-ui.css', false, 1.0);
+wp_enqueue_style('un-theme-options', UNTHEME_URL. 'assets/css/un-theme-options.css', false, 1.0);
+
+
+
+
+
+
 
 wp_enqueue_script('untheme-admin', UNTHEME_URL. 'assets/js/admin.js', array(), 1.0);
 wp_enqueue_script('untheme-select2', UNTHEME_URL. 'assets/js/select2.js', array(), 1.0);
