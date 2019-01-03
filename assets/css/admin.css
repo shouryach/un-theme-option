@@ -132,8 +132,7 @@ background: -webkit-linear-gradient(left, rgba(64,190,177,1) 0%, rgba(0,196,218,
 }
 .un-api .un-col-5 {
 
-    background: -moz-linear-gradient(top, rgba(63,81,105,1) 0%, rgba(30,45,68,1) 100%) !important;
-	background:linear-gradient(top, rgba(63,81,105,1) 0%, rgba(30,45,68,1) 100%) !important;
+    background-color: #2b2e4c;
 	height:100vh;
 	text-align: center;
 	padding:30px 30px;

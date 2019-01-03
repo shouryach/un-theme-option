@@ -5,6 +5,12 @@
 .qodef-tabs-wrapper {
  /* Vertical tabs
 ========================================================================== */
+	
+	background-color: #262626;
+}
+@font-face{
+	font-family: 'kanit';
+	src:url('https://fonts.googleapis.com/css?family=Kanit');
 }
 /* line 8, ../scss/qodef-ui/partials/_tabs.scss */
 .qodef-tabs-wrapper .nav-tabs {
@@ -34,7 +40,7 @@
 /* line 30, ../scss/qodef-ui/partials/_tabs.scss */
 .qodef-tabs-wrapper .qodef-tabs-content {
   background-color: #fcfcfc;
-  padding: 30px;
+  padding-left: 5px;
 }
 /* line 37, ../scss/qodef-ui/partials/_tabs.scss */
 .qodef-tabs-wrapper.vertical {
@@ -61,13 +67,18 @@
 }
 /* line 57, ../scss/qodef-ui/partials/_tabs.scss */
 .qodef-tabs-wrapper.vertical .nav-tabs > li a {
-  border-bottom: 1px solid #dbdee0;
+  border-bottom: 1px solid #2a2c40;
 }
 /* line 61, ../scss/qodef-ui/partials/_tabs.scss */
 .qodef-tabs-wrapper.vertical .nav-tabs > li a:focus, .qodef-tabs-wrapper.vertical .nav-tabs > li a:hover {
-  background-color: #ced1d4;
+  background-color: #2b2e4c;
   border-top: 1px solid #dbdee0;
   border-left: none;
+	outline: none;
+  box-shadow: none;
+}
+.qodef-tabs-wrapper.vertical .nav-tabs .un_active{
+  background-color: #2b2e4c;
 }
 /* line 72, ../scss/qodef-ui/partials/_tabs.scss */
 .qodef-tabs-wrapper.vertical .qodef-tabs-navigation-wrapper,
@@ -76,13 +87,15 @@
 }
 /* line 76, ../scss/qodef-ui/partials/_tabs.scss */
 .qodef-tabs-wrapper.vertical .qodef-tabs-navigation-wrapper {
-  width: 200px;
+  width: 182px;
+	background-color: #131633;
+	height: 100vh;
 }
 /* line 80, ../scss/qodef-ui/partials/_tabs.scss */
 .qodef-tabs-wrapper.vertical .qodef-tabs-content {
   margin-left: 199px;
-  border-left: 1px solid #dbdee0;
-  background:#f3f3f3;
+  border-left: 1px solid transparent;
+  background-color: #262626;
   color:#34383C
 }
 /* line 89, ../scss/qodef-ui/partials/_tabs.scss */
@@ -124,9 +137,13 @@
 
 /* line 1, ../scss/qodef-ui/partials/_switches.scss */
 .cb-enable, .cb-disable, .cb-enable span, .cb-disable span {
-  background: url(img/switch.gif) repeat-x;
+  background-color: #f6f6f6;
+color: #262626;
   display: block;
   float: left;
+}
+.cb-enable:hover{
+	background-color: #212121;
 }
 
 /* line 1, ../scss/qodef-ui/partials/_switches.scss */
@@ -146,13 +163,12 @@
 
 /* line 3, ../scss/qodef-ui/partials/_switches.scss */
 .cb-enable span, .switch-type .cb-enable span {
-  background-position: left -90px;
-  padding: 0 10px;
+  padding: 0 6px;
+/*border-right: 1px solid #a8a8a8;*/
 }
 
 /* line 4, ../scss/qodef-ui/partials/_switches.scss */
 .cb-disable span, .switch-type .cb-disable span {
-  background-position: right -180px;
   padding: 0 10px;
 }
 
@@ -490,3 +506,28 @@
   margin-bottom: 15px;
   max-width: 100px;
 }
+#wpbody-content {background-color: #262626;}
+ul#adminmenu a.wp-has-current-submenu::after{border-right-color: #262626 !important;}
+.cb-disable span:hover {
+    background-color: #262626!important;
+	color: #fff;
+}
+.cb-enable span:hover {
+    background-color: #262626 !important;
+	color: #fff;
+}
+.cb-enable span{
+	transition: all 0.3s ease-in-out;
+}
+.cb-disable span{
+	transition: all 0.3s ease-in-out;
+}
+.cb-enable span:active{
+	background-color: #40CC47 !important;
+	color: #262626;
+}
+.cb-enable span:focus{
+	background-color: #40CC47 !important;
+	color: #262626;
+}
+.upload img {padding-bottom: 10px;}

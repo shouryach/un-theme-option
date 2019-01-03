@@ -11,6 +11,8 @@ Author URI: http://codeartssolution.com/
 if (!defined('ABSPATH')) exit;
 
 include( plugin_dir_path( __FILE__ ) . 'functions.php');
+include( plugin_dir_path( __FILE__ ) . 'un-theme-general.php');
+include( plugin_dir_path( __FILE__ ) . 'un-theme-logo.php');
 include( plugin_dir_path( __FILE__ ) . 'un-theme-header.php');
 
 
@@ -83,6 +85,42 @@ if (!class_exists('untheme_Setting')) {
 			add_option( 'untheme_back_to_top', ''); 
 
 			add_option( 'untheme_fav_icon', ''); 
+			
+			add_option( 'untheme_logo_normal', ''); 
+
+			add_option( 'untheme_logo_sticky', ''); 
+			
+			add_option( 'untheme_logo_fixed', ''); 
+
+			add_option( 'untheme_logo_mobile', ''); 
+			
+			add_option( 'untheme_header_grid', ''); 
+
+			add_option( 'untheme_header_initial', ''); 
+
+			add_option( 'untheme_header_after_scrool', ''); 
+
+			add_option( 'untheme_header_trans_initial', ''); 
+
+			add_option( 'untheme_header_after_trans_scrool', ''); 
+
+			add_option( 'untheme_header_bottom_background_ground', ''); 
+
+			add_option( 'untheme_header_bottom_border_transparency', ''); 
+
+			add_option( 'untheme_header_bottom_border_in_grid', ''); 
+			
+
+
+
+
+			add_option( 'untheme_dropdown_menu_seperator', ''); 
+			add_option( 'untheme_dropdown_menu_seperator_color', ''); 
+			add_option( 'untheme_dropdown_menu_background_color', ''); 
+			add_option( 'untheme_dropdown_menu_transparency_color', ''); 
+
+
+		
 
 		   	register_setting( 'untheme_options_group', 'untheme_register_email', 'untheme_register_email_callback' );
 		   	register_setting( 'untheme_options_group', 'untheme_register_apikey', 'untheme_register_apikey_callback' );
@@ -100,6 +138,22 @@ if (!class_exists('untheme_Setting')) {
 		   	register_setting( 'untheme_options_group', 'untheme_initial_width', 'untheme_initial_width_callback' );
 		   	register_setting( 'untheme_options_group', 'untheme_back_to_top', 'untheme_back_to_top_callback' );
 		   	register_setting( 'untheme_options_group', 'untheme_fav_icon', 'untheme_fav_icon_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_logo_normal', 'untheme_logo_normal_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_logo_sticky', 'untheme_logo_sticky_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_logo_fixed', 'untheme_logo_fixed_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_logo_mobile', 'untheme_logo_mobile_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_header_initial', 'untheme_header_initial_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_header_after_scrool', 'untheme_header_after_scrool_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_header_bottom_background_ground', 'untheme_header_bottom_background_ground_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_header_bottom_border_transparency', 'untheme_header_bottom_border_transparency_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_header_bottom_border_in_grid', 'untheme_header_bottom_border_in_grid_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_dropdown_menu_seperator', 'untheme_dropdown_menu_seperator_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_dropdown_menu_seperator_color', 'untheme_dropdown_menu_seperator_color_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_dropdown_menu_background_color', 'untheme_dropdown_menu_background_color_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_dropdown_menu_transparency_color', 'untheme_dropdown_menu_transparency_color_callback' );
+		
+
+
 
 
 
@@ -113,9 +167,9 @@ if (!class_exists('untheme_Setting')) {
 
 			add_menu_page(      
 
-				'UnTheme Options',            //page title
+				'Un Options',            //page title
 
-				'UnTheme Options',    //menu title
+				'Un Options',    //menu title
 
 				'manage_options',       //capability
 
@@ -123,7 +177,7 @@ if (!class_exists('untheme_Setting')) {
 
 				array( $this, 'untheme_register_email_page' ), //callback function
 				
-				'dashicons-image-crop' ,
+				'dashicons-admin-generic' ,
 
 				     //dashicon icon
 
@@ -134,6 +188,10 @@ if (!class_exists('untheme_Setting')) {
 			add_submenu_page( 'untheme_theme_option', 'Register Api Key', 'Register Api Key',
    			 'manage_options', 'untheme_theme_option');
 			// Add to admin_menu function
+ 			add_submenu_page( 'untheme_theme_option', __('Un General'), __('General'), 'edit_themes', 'untheme_general', 'untheme_general');
+ 			
+ 			add_submenu_page( 'untheme_theme_option', __('Un Logo'), __('Logo'), 'edit_themes', 'untheme_logo', 'untheme_logo');
+ 			
  			add_submenu_page( 'untheme_theme_option', __('Un Header'), __('Header'), 'edit_themes', 'untheme_header', 'untheme_header');
  
 			
