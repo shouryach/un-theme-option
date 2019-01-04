@@ -118,6 +118,16 @@ if (!class_exists('untheme_Setting')) {
 			add_option( 'untheme_dropdown_menu_seperator_color', ''); 
 			add_option( 'untheme_dropdown_menu_background_color', ''); 
 			add_option( 'untheme_dropdown_menu_transparency_color', ''); 
+			
+
+			add_option( 'untheme_full_menu', ''); 
+			
+
+			add_option( 'untheme_header_top', ''); 
+			add_option( 'untheme_header_top_hide_on_scroll', ''); 
+			add_option( 'untheme_header_top_hide_on_mobile', ''); 
+			add_option( 'untheme_header_top_background', ''); 
+			add_option( 'untheme_header_top_padding', ''); 
 
 
 		
@@ -151,9 +161,17 @@ if (!class_exists('untheme_Setting')) {
 		   	register_setting( 'untheme_options_group', 'untheme_dropdown_menu_seperator_color', 'untheme_dropdown_menu_seperator_color_callback' );
 		   	register_setting( 'untheme_options_group', 'untheme_dropdown_menu_background_color', 'untheme_dropdown_menu_background_color_callback' );
 		   	register_setting( 'untheme_options_group', 'untheme_dropdown_menu_transparency_color', 'untheme_dropdown_menu_transparency_color_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_full_menu', 'untheme_full_menu_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_header_top', 'untheme_header_top_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_header_top_hide_on_scroll', 'untheme_header_top_hide_on_scroll_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_header_top_hide_on_mobile', 'untheme_header_top_hide_on_mobile_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_header_top_background', 'untheme_header_top_background_callback' );
+		   	register_setting( 'untheme_options_group', 'untheme_header_top_padding', 'untheme_header_top_padding_callback' );
+
+
 		
-
-
+            
+        
 
 
 

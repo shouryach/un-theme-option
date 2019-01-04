@@ -60,7 +60,7 @@ function untheme_header() {?>
                   <div class="qodef-tab-content">
                      <h2 class="qodef-page-title">Header</h2>
                      <form id="un-header-form" class="postbox">
-                        <div class="qodef-page-form" style="padding-bottom: 30px;">
+                        <div class="qodef-page-form" style="padding-bottom: 10px">
                            <div class="qodef-page-form-section-holder" id="qodef_parallax_settings_panel">
                               <h3 class="qodef-page-section-title">Header</h3>
                               
@@ -275,7 +275,7 @@ function untheme_header() {?>
                       
                        </div>
 
-                        <div class="qodef-page-form" style="padding-bottom: 30px;">
+                        <div class="qodef-page-form" style="padding-bottom: 10px">
                            <div class="qodef-page-form-section-holder" id="qodef_parallax_settings_panel">
                               <h3 class="qodef-page-section-title">Menus</h3>
                               
@@ -372,13 +372,225 @@ function untheme_header() {?>
                                   <!-- close div.qodef-section-content -->
 
                               </div>
-
-                              
-
-
-                          </div>
+                          
+                           </div>
                          
-                       </div>    
+                        </div>    
+
+
+                        <div class="qodef-page-form" style="padding-bottom: 10px">
+                           <div class="qodef-page-form-section-holder" id="qodef_parallax_settings_panel">
+                              <h3 class="qodef-page-section-title">FullScreen Menu</h3>
+                              
+                              <div class="qodef-page-form-section" id="qodef_parallax_onoff">
+                                 <div class="qodef-field-desc">
+                                    <h4>FullScreen Menu</h4>
+                                    
+                                 </div>
+                                 <!-- close div.qodef-field-desc -->
+                                 <div class="qodef-section-content">
+                                    <div class="container-fluid">
+                                       <div class="row">
+                                        <div class="col-lg-12">
+                                          <p class="field switch">
+                                            
+                                            <label data-hide="" data-show="#qodef_transparent_content_container" class="<?php if(get_option('untheme_full_menu') =="Yes") {?>
+                                              cb-enable selected <?php } else { ?>cb-enable dependence <?php }?>"><span>Yes</span>
+
+                                            </label>
+
+                                            <label data-hide="#qodef_transparent_content_container" data-show="" class="<?php if(get_option('untheme_full_menu') =="No") {?>
+                                              cb-disable selected <?php } else { ?>cb-disable <?php }?>"><span>No</span>
+                                            </label>
+
+                                            <input type="radio" class="input_hidden" name="untheme_full_menu" value="Yes" <?php if(get_option('untheme_full_menu') =="Yes") {?>
+                                              checked <?php } ?>> <br>  
+
+                                            <input type="radio" class="input_hidden" name="untheme_full_menu" value="No"  <?php if(get_option('untheme_full_menu') =="No") {?>
+                                              checked <?php } ?>> <br>  
+                                           </p>
+                                      </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- close div.qodef-section-content -->
+                              </div>
+
+                            
+                          
+                           </div>
+                         
+                        </div>  
+
+
+                        <div class="qodef-page-form" style="padding-bottom: 10px">
+                           <div class="qodef-page-form-section-holder" id="qodef_parallax_settings_panel">
+                              <h3 class="qodef-page-section-title">Header Top</h3>
+                              
+                              <div class="qodef-page-form-section" id="qodef_parallax_onoff">
+                                 <div class="qodef-field-desc">
+                                    <h4>Show Header Top Area</h4>
+                                    
+                                 </div>
+                                 <!-- close div.qodef-field-desc -->
+                                 <div class="qodef-section-content">
+                                    <div class="container-fluid">
+                                       <div class="row">
+                                        <div class="col-lg-12">
+                                          <p class="field switch">
+                                            
+                                            <label data-hide="" data-show="#qodef_transparent_content_container" class="<?php if(get_option('untheme_header_top') =="Yes") {?>
+                                              cb-enable selected <?php } else { ?>cb-enable dependence <?php }?>"><span>Yes</span>
+
+                                            </label>
+
+                                            <label data-hide="#qodef_transparent_content_container" data-show="" class="<?php if(get_option('untheme_header_top') =="No") {?>
+                                              cb-disable selected <?php } else { ?>cb-disable <?php }?>"><span>No</span>
+                                            </label>
+
+                                            <input type="radio" class="input_hidden" name="untheme_header_top" value="Yes" <?php if(get_option('untheme_header_top') =="Yes") {?>
+                                              checked <?php } ?>> <br>  
+
+                                            <input type="radio" class="input_hidden" name="untheme_header_top" value="No"  <?php if(get_option('untheme_header_top') =="No") {?>
+                                              checked <?php } ?>> <br>  
+                                           </p>
+                                      </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- close div.qodef-section-content -->
+                              </div>
+
+                              <div class="qodef-page-form-section" id="qodef_parallax_onoff">
+                                 <div class="qodef-field-desc">
+                                    <h4>Hide On Scroll</h4>
+                                    
+                                 </div>
+                                 <!-- close div.qodef-field-desc -->
+                                 <div class="qodef-section-content">
+                                    <div class="container-fluid">
+                                       <div class="row">
+                                        <div class="col-lg-12">
+                                          <p class="field switch">
+                                            
+                                            <label data-hide="" data-show="#qodef_transparent_content_container" class="<?php if(get_option('untheme_header_top_hide_on_scroll') =="Yes") {?>
+                                              cb-enable selected <?php } else { ?>cb-enable dependence <?php }?>"><span>Yes</span>
+
+                                            </label>
+
+                                            <label data-hide="#qodef_transparent_content_container" data-show="" class="<?php if(get_option('untheme_header_top_hide_on_scroll') =="No") {?>
+                                              cb-disable selected <?php } else { ?>cb-disable <?php }?>"><span>No</span>
+                                            </label>
+
+                                            <input type="radio" class="input_hidden" name="untheme_header_top_hide_on_scroll" value="Yes" <?php if(get_option('untheme_header_top_hide_on_scroll') =="Yes") {?>
+                                              checked <?php } ?>> <br>  
+
+                                            <input type="radio" class="input_hidden" name="untheme_header_top_hide_on_scroll" value="No"  <?php if(get_option('untheme_header_top_hide_on_scroll') =="No") {?>
+                                              checked <?php } ?>> <br>  
+                                           </p>
+                                      </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- close div.qodef-section-content -->
+                              </div>
+
+
+                              <div class="qodef-page-form-section" id="qodef_parallax_onoff">
+                                 <div class="qodef-field-desc">
+                                    <h4>Hide Top Bar On Mobile Header</h4>
+                                    
+                                 </div>
+                                 <!-- close div.qodef-field-desc -->
+                                 <div class="qodef-section-content">
+                                    <div class="container-fluid">
+                                       <div class="row">
+                                        <div class="col-lg-12">
+                                          <p class="field switch">
+                                            
+                                            <label data-hide="" data-show="#qodef_transparent_content_container" class="<?php if(get_option('untheme_header_top_hide_on_mobile') =="Yes") {?>
+                                              cb-enable selected <?php } else { ?>cb-enable dependence <?php }?>"><span>Yes</span>
+
+                                            </label>
+
+                                            <label data-hide="#qodef_transparent_content_container" data-show="" class="<?php if(get_option('untheme_header_top_hide_on_mobile') =="No") {?>
+                                              cb-disable selected <?php } else { ?>cb-disable <?php }?>"><span>No</span>
+                                            </label>
+
+                                            <input type="radio" class="input_hidden" name="untheme_header_top_hide_on_mobile" value="Yes" <?php if(get_option('untheme_header_top_hide_on_mobile') =="Yes") {?>
+                                              checked <?php } ?>> <br>  
+
+                                            <input type="radio" class="input_hidden" name="untheme_header_top_hide_on_mobile" value="No"  <?php if(get_option('untheme_header_top_hide_on_mobile') =="No") {?>
+                                              checked <?php } ?>> <br>  
+                                           </p>
+                                      </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- close div.qodef-section-content -->
+                              </div>
+
+                              <div class="qodef-page-form-section">
+
+
+                                  <div class="qodef-field-desc">
+                                    <h4>Background Color</h4>
+
+                                    
+                                  </div>
+                                  <!-- close div.qodef-field-desc -->
+
+                                  <div class="qodef-section-content">
+                                    <div class="container-fluid">
+                                          <div class="row">
+                                  
+                                              <div class="col-lg-3" id="qodef_gradient_style1_start_color">
+                                                
+                                                  <input type="text"  name="untheme_header_top_background" value="<?php echo esc_attr( get_option('untheme_header_top_background') ); ?>" class="my-color-field" data-default-color="#effeff" size="50" />
+                                                
+                                              </div>
+                                  
+                                              
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <!-- close div.qodef-section-content -->
+
+                              </div>
+
+                               <div class="qodef-page-form-section">
+
+
+                                  <div class="qodef-field-desc">
+                                    <h4>Padding(%)</h4>
+
+                                    
+                                  </div>
+                                  <!-- close div.qodef-field-desc -->
+
+                                  <div class="qodef-section-content">
+                                    <div class="container-fluid">
+                                          <div class="row">
+                                  
+                                              <div class="col-lg-6">
+                                                
+                                                  <input type="text"  name="untheme_header_top_padding" value="<?php echo esc_attr( get_option('untheme_header_top_padding') ); ?>"  />
+                                                
+                                              </div>
+                                  
+                                              
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <!-- close div.qodef-section-content -->
+
+                              </div>
+
+                            
+                          
+                           </div>
+                         
+                        </div>  
 
 
 
